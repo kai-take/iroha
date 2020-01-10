@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.header {
+  width: 100%;
+  background-color: bisque;
+  background-image: url(../img/mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: calc(670 / 374 *100%);
+  position: relative;
+}
+
+.header_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.header_container .header_container_logo {
+  width: 100%;
+  display: block;
+  min-width: 289px;
+  max-width: 100%;
+  min-height: 171px;
+}
+
+.header_box {
+  background-color: #000000;
+  opacity: 0.7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: calc(16 / 374 *100%);
+  padding-right: calc(16 / 374 *100%);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*----------ハンバーガーメニュー-------------*/
+.navi-btn1 {
+  top: calc(21.8 / 670 *100%);
+  left: calc(326 / 374 *100%);
+}
+
+.navi-btn {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+  /*ホバー時のカーソル変化*/
+}
+
+.navi-btn span {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #FFFFFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.navi-btn span:nth-of-type(2) {
+  top: 6px;
+  opacity: 1;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.navi-btn span:last-of-type {
+  top: 12px;
+}
+
+/*---クリックした時--*/
+.navi-btn-on span:first-of-type {
+  -webkit-transform: rotate(-45deg) translateY(8px);
+          transform: rotate(-45deg) translateY(8px);
+}
+
+.navi-btn-on span:nth-of-type(2) {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 0;
+}
+
+.navi-btn-on span:last-of-type {
+  -webkit-transform: rotate(45deg) translateY(-8px);
+          transform: rotate(45deg) translateY(-8px);
+}
+
+.navi-menu {
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+  background: #000000;
+  opacity: 0.9;
+  width: calc(517 / 593 *100%);
+  text-align: center;
+  /*中のリストを中央寄せ*/
+  position: fixed;
+  z-index: 100;
+  overflow-y: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navi-menu li {
+  list-style-type: none;
+}
+
+/*-------End------*/
+@media screen and (min-width: 768px) {
+  .header {
+    background-image: url(../img/tablet.png);
+    padding-top: calc(373 / 768 *100%);
+    padding-bottom: 10%;
+    height: 0;
+    min-height: 0;
+  }
+  .header .header_container {
+    top: 58%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navi-btn1 {
+    display: none;
+  }
+  .navi-menu {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
