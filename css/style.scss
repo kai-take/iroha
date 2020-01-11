@@ -1,4 +1,6 @@
-@import 'normalize'; //リセットcss//
+//セミコロンつけ忘れない//
+@import 'foundation/normalize'; //リセットcss//
 @import 'utility';   //繰り返し使うスタイル//
-@import 'scaffolding'; //基本設定//
-@import 'header'; //ヘッダー//
+@import 'foundation/scaffolding'; //基本設定//
+@import 'layout/l-header';
+@import 'object/component/c-header';

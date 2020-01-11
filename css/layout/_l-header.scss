@@ -1,22 +1,23 @@
-.header{
-    width: 100%;
-    background-color:bisque;
-    background-image:url(../img/mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: calc(670 / 374 *100%); //レスポンシブ用///* 表示画像の高さ ÷ 表示画像の幅 × 100 */
-    position: relative;
+
+.l-header{
+  width: 100%;
+  position: fixed;
+    display: flex;
+    // justify-content:space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: calc(16 / 374 *100%);
+    padding-right:calc(16 / 374 *100%);
 }
 
-.header_container{
+.l-logo1{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);   
 
-
-
-.header_container_logo{
+.l-logo_inner{
   width:100%;
   display: block;
   min-width: 289px;
@@ -27,19 +28,7 @@
 
 
 .header_box{
-    background-color: #000000;
-    opacity: 0.7;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: calc(16 / 374 *100%);
-    padding-right:calc(16 / 374 *100%);
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    // justify-content:space-between;
-    align-items: center;
+
 }
 
 .header_box_logo{
