@@ -2,3 +2,73 @@
     background-color: #000000;
     opacity: 0.7;
 }
+
+/*----------ハンバーガーメニュー-------------*/
+.c-btn1{
+    top:calc(21.8 / 670 *100%);
+    left:calc(326 / 374 *100%);
+}
+
+.c-btn1_inner{
+    width: 18px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;/*ホバー時のカーソル変化*/
+
+  span /*限定的な要素のためタイプセレクタを許容*/{
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 2px;
+    background:#FFFFFF;
+    transition: all .3s;
+  }
+
+  span:nth-of-type(2){
+    top:6px;
+    opacity: 1;
+    transition: all .3s;
+  }
+
+  span:last-of-type {
+    top: 12px;
+  }
+
+}
+
+   /*---クリックした時--*/
+  .menu-show span:first-of-type {
+    transform: rotate(-45deg)translateY(8px)/*下にずらす*/
+  }
+  .menu-show span:nth-of-type(2) {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  .menu-show span:last-of-type {
+    transform: rotate(45deg)translateY(-8px)/*上にずらす*/
+  }
+
+  .c-btn1_menu{
+    top: 80px;
+    left:50%;
+    transform: translateX(-50%);
+    display: none;
+    background: #000000;
+    opacity: 0.9;
+    width:calc(517 / 593 *100%);
+    text-align: center;/*中のリストを中央寄せ*/
+    position: fixed;
+    z-index: 100;
+    overflow-y: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+.c-btn1_menu_item{
+
+ .li{
+    list-style-type: none;
+  }
+  
+  }
+/*-------End------*/

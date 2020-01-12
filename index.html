@@ -13,36 +13,52 @@
     <meta name="description" content="">
 </head>
 
-<header class="l-header p-header">
 
-    <div class="l-logo"><p><img src="img/logo-white.svg" alt="" class="l-logo1_inner"></p></div>
+<header class="l-header c-header"><!--上部黒いボックス-->
 
+  <div class="l-inner">
 
-    <div class="c-topbox"><!--上部の黒いボックス-->
-      <h1 class="header_box_logo"><a href="#"><img src="img/logo.svg" alt="暮らしの体験宿いろは"></a></h1>
+    <h1 class="l-logo1"><a href="#"><img src="img/logo.svg" alt="暮らしの体験宿いろは"></a></h1>
 
-      <!---ハンバーガーメニュー-->
-
-      <div class="navi-btn1">
-          <div class="navi-btn" id="navi-btn"><!--idはjs用-->
-            <span></span>
-            <span class="2"></span>
-            <span></span>
-          </div>
+  <!--ハンバーガーメニュー--> 
+    <div class="c-btn1">
+      <div class="c-btn1_inner" id="c-btn1_inner"><!--idはjs用-->
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      
-      <div class="navi-menu" id="navi-menu">
-        <li><a href="#">menu 1</a></li>
-        <li><a href="#">menu 2</a></li>
-        <li><a href="#">menu 3</a></li>
-      </div>
+    </div>
 
+  <div class="c-btn1_menu" id="c-btn1_menu">
+    
+    <ul class="c-btn1_menu_item">
+        <li class="li"><a href="#">menu 1</a></li>
+        <li class="li"><a href="#">menu 2</a></li>
+        <li class="li"><a href="#">menu 3</a></li>
+    </ul>
 
-    <!---ハンバーガーメニュー--><!--header_box--> 
+ </div><!---ハンバーガーメニュー-->
 
-</div>
+</div><!--l-inner-->
 
 </header>
+
+<div class="c-mainvisual">
+
+  <div class="c-mainvisual_inner">
+
+
+
+
+  <div class="l-logo2"><p><img src="img/logo-white.svg" alt="" class="l-logo2_inner"></p></div>
+
+ </div>
+
+
+</div><!--mainvisual-->
+
+
+
 
 <main></main>
 
@@ -51,13 +67,13 @@
 <script>
 
     $(function() {
-      $("#navi-btn").click(function(){
-        if (!$("#navi-btn").hasClass("navi-btn-on")) {
-          $("#navi-btn").addClass("navi-btn-on");
-          $("#navi-menu").fadeIn();
+      $("#c-btn1_inner").click(function(){
+        if (!$("#c-btn1_inner").hasClass("menu-show")) {
+          $("#c-btn1_inner").addClass("menu-show");
+          $("#c-btn1_menu").fadeIn();
         } else {
-          $("#navi-btn").removeClass("navi-btn-on")
-          $("#navi-menu").fadeOut();
+          $("#c-btn1_inner").removeClass("menu-show")
+          $("#c-btn1_menu").fadeOut();
         }
       });
     });
