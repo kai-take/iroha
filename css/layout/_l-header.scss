@@ -26,31 +26,3 @@
 
 
 
-@media screen and (min-width:768px){
-    .header{
-        background-image: url(../img/tablet.png);
-        padding-top: calc(373 / 768 *100%);//レスポンシブ用///* 表示画像の高さ ÷ 表示画像の幅 × 100 */
-        padding-bottom: 10%;
-        height: 0;
-        min-height: 0;//打ち消し//
-
-        .header_container{
-            top: 58%;
-        }
-    }
-}
-
-@media screen and (min-width:1024px){
-    .header{
-        // background-image: url(../img/pc.png);
-        // min-height: 1079px;
-    }
-
-    .navi-btn1{
-      display: none;
-    }
-
-    .navi-menu{
-      display: none;
-    }
-}

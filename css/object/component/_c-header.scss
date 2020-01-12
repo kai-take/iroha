@@ -37,14 +37,14 @@
 }
 
    /*---クリックした時--*/
-  .menu-show span:first-of-type {
+  .js-menu--show span:first-of-type {
     transform: rotate(-45deg)translateY(8px)/*下にずらす*/
   }
-  .menu-show span:nth-of-type(2) {
+  .js-menu--show span:nth-of-type(2) {
     transform: translateX(0);
     opacity: 0;
   }
-  .menu-show span:last-of-type {
+  .js-menu--show span:last-of-type {
     transform: rotate(45deg)translateY(-8px)/*上にずらす*/
   }
 
@@ -69,6 +69,16 @@
  .li{
     list-style-type: none;
   }
-  
   }
 /*-------End------*/
+
+@media screen and (min-width:1024px){
+    .header{
+        // background-image: url(../img/pc.png);
+        // min-height: 1079px;
+    }
+    
+    .c-btn1{
+      display: none;
+    }
+}

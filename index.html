@@ -47,9 +47,6 @@
 
   <div class="c-mainvisual_inner">
 
-
-
-
   <div class="l-logo2"><p><img src="img/logo-white.svg" alt="" class="l-logo2_inner"></p></div>
 
  </div>
@@ -65,20 +62,17 @@
 <footer></footer>
 
 <script>
-
     $(function() {
       $("#c-btn1_inner").click(function(){
-        if (!$("#c-btn1_inner").hasClass("menu-show")) {
-          $("#c-btn1_inner").addClass("menu-show");
+        if (!$("#c-btn1_inner").hasClass("js-menu--show")) {
+          $("#c-btn1_inner").addClass("js-menu--show");
           $("#c-btn1_menu").fadeIn();
         } else {
-          $("#c-btn1_inner").removeClass("menu-show")
+          $("#c-btn1_inner").removeClass("js-menu--show")
           $("#c-btn1_menu").fadeOut();
         }
       });
     });
-    
-    
     </script>
   
     

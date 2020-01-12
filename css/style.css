@@ -125,28 +125,6 @@ body {
   margin: auto;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    background-image: url(../img/tablet.png);
-    padding-top: calc(373 / 768 *100%);
-    padding-bottom: 10%;
-    height: 0;
-    min-height: 0;
-  }
-  .header .header_container {
-    top: 58%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .navi-btn1 {
-    display: none;
-  }
-  .navi-menu {
-    display: none;
-  }
-}
-
 .c-header {
   background-color: #000000;
   opacity: 0.7;
@@ -188,18 +166,18 @@ body {
 }
 
 /*---クリックした時--*/
-.menu-show span:first-of-type {
+.js-menu--show span:first-of-type {
   -webkit-transform: rotate(-45deg) translateY(8px);
           transform: rotate(-45deg) translateY(8px);
 }
 
-.menu-show span:nth-of-type(2) {
+.js-menu--show span:nth-of-type(2) {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 0;
 }
 
-.menu-show span:last-of-type {
+.js-menu--show span:last-of-type {
   -webkit-transform: rotate(45deg) translateY(-8px);
           transform: rotate(45deg) translateY(-8px);
 }
@@ -227,6 +205,12 @@ body {
 }
 
 /*-------End------*/
+@media screen and (min-width: 1024px) {
+  .c-btn1 {
+    display: none;
+  }
+}
+
 .c-mainvisual {
   width: 100%;
   background-color: transparent;
@@ -250,7 +234,20 @@ body {
   width: 100%;
   display: block;
   min-width: 289px;
-  max-width: 100%;
   min-height: 171px;
+}
+
+@media screen and (min-width: 768px) {
+  .c-mainvisual {
+    background-image: url(../img/tablet.png);
+    padding-top: calc(373 / 768 *100%);
+    padding-bottom: 10%;
+    height: 0;
+    min-height: 0;
+  }
+  .l-logo2 {
+    top: 58%;
+    width: 46%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
