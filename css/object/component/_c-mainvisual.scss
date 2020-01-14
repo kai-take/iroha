@@ -1,0 +1,54 @@
+.c-mainvisual{
+    width: 100%;
+    background-color:transparent;
+    background-image:url(../img/mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: calc(670 / 374 *100%); //レスポンシブ用///* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+    position: relative;
+}
+
+
+
+.c-mainvisual_inner{
+    
+}
+
+
+
+.l-logo2{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);   
+
+    &_inner{
+            width:100%;
+            display: block;
+            min-width: 289px;
+            // max-width: 100%;
+            min-height:171px; 
+    }
+  }
+
+
+  @media screen and (min-width:768px){
+    .c-mainvisual{
+        background-image: url(../img/tablet.png);
+        padding-top: calc(373 / 768 *100%);//レスポンシブ用///* 表示画像の高さ ÷ 表示画像の幅 × 100 */
+        padding-bottom: 10%;
+        height: 0;
+        min-height: 0;//打ち消し//
+      }
+
+        .l-logo2{
+            top: 58%;
+            width:46%;
+
+            .l-logo2_inner{
+            }
+        }
+}
+
+
