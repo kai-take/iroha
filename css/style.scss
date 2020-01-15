@@ -1,6 +1,7 @@
 //セミコロンつけ忘れない//
 @import 'foundation/normalize'; //リセットcss//
 @import 'utility';   //繰り返し使うスタイル//
+@import 'foundation/variable';//変数//
 @import 'foundation/scaffolding'; //基本設定//
 @import 'layout/l-header';
 @import 'layout/l-footer';

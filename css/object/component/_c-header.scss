@@ -21,7 +21,7 @@
     width: 18px;
     height: 2px;
     background:#FFFFFF;
-    transition: all .3s;
+    transition: all .3s; //理解がまだ浅い//
   }
 
   span:nth-of-type(2){
@@ -48,7 +48,7 @@
     transform: rotate(45deg)translateY(-8px)/*上にずらす*/
   }
 
-  .c-btn1_menu{
+  .c-btn1_menu{//ハンバーガークリックで呼び出すメニュー//
     top: 80px;
     left:50%;
     transform: translateX(-50%);
@@ -60,7 +60,7 @@
     position: fixed;
     z-index: 100;
     overflow-y: auto;
-    padding-top: 25px;
+    padding-top: 25px;//こういうのはlayoutで指定して、マルチクラスでもいいかもね//
     padding-bottom: 25px;
   }
 
@@ -70,15 +70,38 @@
     list-style-type: none;
   }
   }
+
+  .c-nav{
+    display: none;/*スマホ、タブレットの時は隠す*/
+    width: calc(1012 / 1920 *100%);
+    // position: relative;
+
+  
+    .c-nav_menu{
+      display: flex;
+      color: burlywood;
+      justify-content: space-between;
+    }
+
+    .c-nav_menu_li{
+      font-family: $family-main;
+      color: $color-main;
+      font-size:$size-nav;
+      font-weight: $weight-nav;
+      line-height: $lineheight-nav;
+    }
+
+  }
 /*-------End------*/
 
 @media screen and (min-width:1024px){
-    .header{
-        // background-image: url(../img/pc.png);
-        // min-height: 1079px;
-    }
     
     .c-btn1{
-      display: none;
+      display: none;/*pcでは隠す*/
+    }
+
+    .c-nav{
+      display:block;/*pcで出す*/
     }
 }
+

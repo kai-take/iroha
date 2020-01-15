@@ -204,10 +204,38 @@ body {
   list-style-type: none;
 }
 
+.c-nav {
+  display: none;
+  /*スマホ、タブレットの時は隠す*/
+  width: calc(1012 / 1920 *100%);
+}
+
+.c-nav .c-nav_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: burlywood;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.c-nav .c-nav_menu_li {
+  font-family: "凸版文久見出し明朝";
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 100;
+}
+
 /*-------End------*/
 @media screen and (min-width: 1024px) {
   .c-btn1 {
     display: none;
+    /*pcでは隠す*/
+  }
+  .c-nav {
+    display: block;
+    /*pcで出す*/
   }
 }
 
