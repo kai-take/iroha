@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css" media="screen and (min-width:768px)"> <!--タブレット 768~1024px-->
     <link rel="stylesheet" href="css/style.css" media="screen and (min-width:1024px)"> <!--パソコン 1024~ -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
+    <script src="js/my.js"></script> 
     <title>iroha</title>
 
     <meta name="description" content="">
@@ -22,14 +23,14 @@
 
   <!--ハンバーガーメニュー--> 
     <div class="c-btn1">
-      <div class="c-btn1_inner" id="c-btn1_inner"><!--idはjs用-->
+      <div class="c-btn1_inner" id="c-btn1_inner"><!--idはjs用,js-menu--showが入る-->
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
 
-  <div class="c-btn1_menu" id="c-btn1_menu">
+  <div class="c-btn1_menu" id="c-btn1_menu"><!--フェードインするメニュー-->
     
     <ul class="c-btn1_menu_item">
         <li class="li"><a href="#">menu 1</a></li>
@@ -73,21 +74,9 @@
 
 <footer></footer>
 
-<script>
-    $(function() {
-      $("#c-btn1_inner").click(function(){
-        if (!$("#c-btn1_inner").hasClass("js-menu--show")) {
-          $("#c-btn1_inner").addClass("js-menu--show");
-          $("#c-btn1_menu").fadeIn();
-        } else {
-          $("#c-btn1_inner").removeClass("js-menu--show")
-          $("#c-btn1_menu").fadeOut();
-        }
-      });
-    });
-    </script>
+
   
-    
+
 
     
 </html>
