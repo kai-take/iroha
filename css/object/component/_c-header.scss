@@ -79,13 +79,12 @@
   
     .c-nav_menu{
       display: flex;
-      color: burlywood;
       justify-content: space-between;
     }
 
-    .c-nav_menu_li{
-      font-family: $family-main;
+    .-nav_menu_li{
       color: $color-main;
+      font-family: $family-main;
       font-size:$size-nav;
       font-weight: $weight-nav;
       line-height: $lineheight-nav;
