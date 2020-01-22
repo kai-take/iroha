@@ -1,40 +1,125 @@
 .c-header{
-    background-color: #000000;
-    opacity: 0.7;
+  background-color: #000000;
+  opacity: 0.7;
 }
 
 /*----------ハンバーガーメニュー-------------*/
 .c-btn1{
-    top:calc(21.8 / 670 *100%);
-    left:calc(326 / 374 *100%);
+  top:calc(21.8 / 670 *100%);
+  left:calc(326 / 374 *100%);
 }
 
 .c-btn1_inner{
+  width: 18px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;/*ホバー時のカーソル変化*/
+
+span /*限定的な要素のためタイプセレクタを許容*/{
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background:#FFFFFF;
+  transition: all .3s; 
+}
+
+span:nth-of-type(2){
+
+  top:6px;
+  opacity: 1;
+  /* transition: all .3s;//アニメーションをかけて消す*/
+  transition-property:opacity;/*1 → 0にする*/
+}
+
+span:last-of-type {
+  top: 12px;
+}
+}
+
+ /*---クリックした時--*/
+.js-menu--show span:first-of-type {
+  transform: rotate(-45deg)translateY(8px)/*下にずらす*/
+}
+.js-menu--show span:nth-of-type(2) {
+  transform: translateX(0);
+  opacity: 0;
+}
+.js-menu--show span:last-of-type {
+  transform: rotate(45deg)translateY(-8px)/*上にずらす*/
+}
+
+.c-btn1_menu{/*ハンバーガークリックで呼び出すメニュー*/
+  top: 80px;
+  left:50%;
+  transform: translateX(-50%);
+  display: none;
+  background: #000000;
+  opacity: 0.9;
+  width:calc(517 / 593 *100%);
+  text-align: center;/*中のリストを中央寄せ*/
+  position: fixed;
+  z-index: 100;
+  overflow-y: auto;
+  padding-top: 25px;/*こういうのはlayoutで指定して、マルチクラスでもいいかもね*/
+  padding-bottom: 25px;
+}
+
+.c-btn1_menu_item{
+
+  .li{
+  color: $color-main;
+  }
+}
+
+.c-nav{
+  display: none;/*スマホ、タブレットの時は隠す*/
+  width: calc(1012 / 1920 *100%);
+
+  .c-nav_menu{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .c-header{
+    background-color: #000000;
+    opacity: 0.7;
+  }
+  
+  /*----------ハンバーガーメニュー-------------*/
+  .c-btn1{
+    top:calc(21.8 / 670 *100%);
+    left:calc(326 / 374 *100%);
+  }
+  
+  .c-btn1_inner{
     width: 18px;
     height: 18px;
     position: relative;
     cursor: pointer;/*ホバー時のカーソル変化*/
-
+  
   span /*限定的な要素のためタイプセレクタを許容*/{
     position: absolute;
     display: block;
     width: 18px;
     height: 2px;
     background:#FFFFFF;
-    transition: all .3s; //理解がまだ浅い//
+    transition: all .3s; 
   }
-
+  
   span:nth-of-type(2){
+  
     top:6px;
     opacity: 1;
-    transition: all .3s;
+    /* transition: all .3s;//アニメーションをかけて消す*/
+    transition-property:opacity;/*1 → 0にする*/
   }
-
+  
   span:last-of-type {
     top: 12px;
   }
-}
-
+  }
+  
    /*---クリックした時--*/
   .js-menu--show span:first-of-type {
     transform: rotate(-45deg)translateY(8px)/*下にずらす*/
@@ -46,8 +131,8 @@
   .js-menu--show span:last-of-type {
     transform: rotate(45deg)translateY(-8px)/*上にずらす*/
   }
-
-  .c-btn1_menu{//ハンバーガークリックで呼び出すメニュー//
+  
+  .c-btn1_menu{/*ハンバーガークリックで呼び出すメニュー*/
     top: 80px;
     left:50%;
     transform: translateX(-50%);
@@ -59,47 +144,74 @@
     position: fixed;
     z-index: 100;
     overflow-y: auto;
-    padding-top: 25px;//こういうのはlayoutで指定して、マルチクラスでもいいかもね//
+    padding-top: 25px;/*こういうのはlayoutで指定して、マルチクラスでもいいかもね*/
     padding-bottom: 25px;
   }
-
-.c-btn1_menu_item{
-
- .li{
-    list-style-type: none;
-  }
-  }
-
-  .c-nav{
-    display: none;/*スマホ、タブレットの時は隠す*/
-    width: calc(1012 / 1920 *100%);
-    // position: relative;
-
   
-    .c-nav_menu{
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .-nav_menu_li{
-      color: $color-main;
-      font-family: $family-main;
-      font-size:$size-nav;
-      font-weight: $weight-nav;
-      line-height: $lineheight-nav;
-    }
-
+  .c-btn1_menu_item{
+  
+  .li{
+   color: $color-main;
   }
-/*-------End------*/
+  }
+  
+  .c-nav{//グローバルナビゲーション
+    display: none;/*スマホ、タブレットの時は隠す*/
+    width: calc(1200 / 1920 *100%);
+  }
 
-@media screen and (min-width:1024px){
+  .c-nav_menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .c-nav_menu_li{
+    font-family:$family-main;
+    color:$color-main;
+    font-size: $size-nav;
+    font-weight: $weight-nav;
+  }
+
+  .c-nav_menu_li:first-of-type{
+    white-space: nowrap;//折り返さない
+  }
+
+  .l-nav_menu_li{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .c-nav_menu_li:nth-of-type(3){
+  }
+
+
+
+}
+
+  /*-------End------*/
+  
+  @media screen and (min-width:1024px){
     
     .c-btn1{
       display: none;/*pcでは隠す*/
     }
-
+  
     .c-nav{
       display:block;/*pcで出す*/
     }
-}
+  }
 
+/*-------End------*/
+
+@media screen and (min-width:1024px){
+  
+  .c-btn1{
+    display: none;/*pcでは隠す*/
+  }
+
+  .c-nav{
+    display:block;/*pcで出す*/
+  }
+}

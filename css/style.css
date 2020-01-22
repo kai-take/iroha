@@ -102,6 +102,10 @@ body {
   font-size: 1.6rem;
 }
 
+li {
+  list-style-type: none;
+}
+
 .l-header {
   width: 100%;
   position: fixed;
@@ -157,8 +161,10 @@ body {
 .c-btn1_inner span:nth-of-type(2) {
   top: 6px;
   opacity: 1;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  /* transition: all .3s;//アニメーションをかけて消す*/
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  /*1 → 0にする*/
 }
 
 .c-btn1_inner span:last-of-type {
@@ -183,6 +189,7 @@ body {
 }
 
 .c-btn1_menu {
+  /*ハンバーガークリックで呼び出すメニュー*/
   top: 80px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -197,34 +204,162 @@ body {
   z-index: 100;
   overflow-y: auto;
   padding-top: 25px;
+  /*こういうのはlayoutで指定して、マルチクラスでもいいかもね*/
   padding-bottom: 25px;
 }
 
 .c-btn1_menu_item .li {
-  list-style-type: none;
+  color: #FFFFFF;
 }
 
 .c-nav {
   display: none;
   /*スマホ、タブレットの時は隠す*/
   width: calc(1012 / 1920 *100%);
+  /*----------ハンバーガーメニュー-------------*/
+  /*---クリックした時--*/
 }
 
 .c-nav .c-nav_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: burlywood;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
+.c-nav .c-header {
+  background-color: #000000;
+  opacity: 0.7;
+}
+
+.c-nav .c-btn1 {
+  top: calc(21.8 / 670 *100%);
+  left: calc(326 / 374 *100%);
+}
+
+.c-nav .c-btn1_inner {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  cursor: pointer;
+  /*ホバー時のカーソル変化*/
+}
+
+.c-nav .c-btn1_inner span {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #FFFFFF;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.c-nav .c-btn1_inner span:nth-of-type(2) {
+  top: 6px;
+  opacity: 1;
+  /* transition: all .3s;//アニメーションをかけて消す*/
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  /*1 → 0にする*/
+}
+
+.c-nav .c-btn1_inner span:last-of-type {
+  top: 12px;
+}
+
+.c-nav .js-menu--show span:first-of-type {
+  -webkit-transform: rotate(-45deg) translateY(8px);
+          transform: rotate(-45deg) translateY(8px);
+}
+
+.c-nav .js-menu--show span:nth-of-type(2) {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 0;
+}
+
+.c-nav .js-menu--show span:last-of-type {
+  -webkit-transform: rotate(45deg) translateY(-8px);
+          transform: rotate(45deg) translateY(-8px);
+}
+
+.c-nav .c-btn1_menu {
+  /*ハンバーガークリックで呼び出すメニュー*/
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+  background: #000000;
+  opacity: 0.9;
+  width: calc(517 / 593 *100%);
+  text-align: center;
+  /*中のリストを中央寄せ*/
+  position: fixed;
+  z-index: 100;
+  overflow-y: auto;
+  padding-top: 25px;
+  /*こういうのはlayoutで指定して、マルチクラスでもいいかもね*/
+  padding-bottom: 25px;
+}
+
+.c-nav .c-btn1_menu_item .li {
+  color: #FFFFFF;
+}
+
+.c-nav .c-nav {
+  display: none;
+  /*スマホ、タブレットの時は隠す*/
+  width: calc(1200 / 1920 *100%);
+}
+
+.c-nav .c-nav_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .c-nav .c-nav_menu_li {
   font-family: "凸版文久見出し明朝";
   color: #FFFFFF;
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: 100;
+}
+
+.c-nav .c-nav_menu_li:first-of-type {
+  white-space: nowrap;
+}
+
+.c-nav .l-nav_menu_li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+/*-------End------*/
+@media screen and (min-width: 1024px) {
+  .c-btn1 {
+    display: none;
+    /*pcでは隠す*/
+  }
+  .c-nav {
+    display: block;
+    /*pcで出す*/
+  }
 }
 
 /*-------End------*/
