@@ -21,15 +21,21 @@ span /*限定的な要素のためタイプセレクタを許容*/{
   width: 18px;
   height: 2px;
   background:#FFFFFF;
-  transition: all .3s; 
+  
+  transition-delay:transform;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-delay:2s;
 }
 
 span:nth-of-type(2){
-
   top:6px;
   opacity: 1;
-  /* transition: all .3s;//アニメーションをかけて消す*/
+
   transition-property:opacity;/*1 → 0にする*/
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+  transition-delay: 0.1s;
 }
 
 span:last-of-type {
